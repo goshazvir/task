@@ -1,0 +1,276 @@
+
+$green: #4eaa26 
+$red: #c82c23
+$orange: #ed6124
+$blue: #7fc5e5
+$dark_blue: #6d83a6
+$gray: #eee
+$dark_gray: #b3b3b3
+$black: #333
+$white: #fff
+
+body
+	font-family: Arial, sans-serif
+	font-size: 12px
+	line-height: 1.4
+
+
+.align-left
+	text-align: left
+.align-center
+	text-align: center
+.align-right
+	text-align: right
+
+.arr-down
+	+s(arr_down)
+
+.ico-cancel
+	display: inline-block
+	vertical-align: middle
+	+s(cancel)
+
+.ico-success
+	display: inline-block
+	vertical-align: middle
+	+s(success)
+
+.ico-delivered
+	display: inline-block
+	vertical-align: middle
+	+s(car)
+
+
+.status
+	font-size: 0
+	&.m-cancel
+		span
+			color: $red
+	&.m-success
+		span
+			color: $green
+	&.m-delivered
+		span
+			color: $black 
+	span
+		display: inline-block
+		vertical-align: middle
+		font-size: 14px
+	.ico-cancel, .ico-success, .ico-delivered
+		margin-right: 10px
+	
+
+
+// order
+.order
+	width: 840px
+	margin: 0 auto
+	padding: 20px
+	.order-nav
+		ul
+			margin-bottom: 30px
+			+clr
+		li
+			margin-left: 20px
+			float: left
+			&:first-child
+				margin-left: 0
+			&.is-active
+				a
+					color: $black
+					border-bottom: transparent 
+		a
+			font-size: 20px
+			color: $blue
+			text-decoration: none
+			border-bottom: 1px dotted $blue
+	.order-item
+		display: none
+		&.is-active
+			display: block
+	.order-topper
+		padding: 15px 0
+		border-top: 1px solid $gray
+		min-height: 1px 
+		+clr
+	.order-label
+		float: left
+		&.w180
+			width: 180px
+		&.w340
+			width: 340px
+	.order-meta
+		font-size: 0
+		&.m-bold
+			span
+				font-weight: 700
+		span
+			display: inline-block
+			vertical-align: middle
+			font-size: 14px
+		.arr-down
+			display: inline-block
+			vertical-align: middle
+			margin-left: 5px
+	.order-description
+		display: none
+		padding: 20px 0
+		+clr
+		.order-description-row
+			+clr
+		.order-description-label
+			&.w180
+				width: 180px
+				float: left
+			&.wAuto
+				float: none
+				overflow: hidden
+		.order-description-meta
+			color: $dark_gray 
+	.order-list
+		& > li
+			cursor: pointer
+			position: relative
+			+gh($white 1%, #f4fbfd 50%, $white 99%)
+			&:first-child
+				background-color: $white
+				background: $white
+				&:after
+					content: none
+			&:after
+				content: ""
+				+s(tab_arr)
+				position: absolute
+				top: 16px
+				right: 20px
+			&.is-active
+				background-color: $white
+				background: $white
+				&:after
+					+rotate(90)
+				.order-description
+					display: block
+	.basket
+		margin-top: 20px			
+
+// basket
+.basket
+	li
+		font-size: 0
+		+clr
+		padding: 10px 0
+		border-top: 1px dotted $gray
+		&:first-child
+			border-top: 0
+	.basket-row
+		+clr
+	.basket-label
+		float: left
+		font-size: 14px
+		&.w490
+			width: 490px
+		&.w110
+			width: 110px
+		&.w200
+			width: 200px
+		&.w400
+			width: 400px
+	.basket-items
+		overflow: hidden
+	.basket-item
+		margin-top: 10px
+		overflow: hidden
+		&:first-child
+			margin-top: 0
+	.basket-meta
+		font-size: 14px
+		font-weight: 700 
+
+.bonus
+	padding: 5px
+	display: inline-block
+	background: $gray 
+	.bonus-summ
+		margin-right: 5px
+		font-weight: 700
+		color: #333 
+	.bonus-meta
+		color: #333
+
+.product
+	+clr
+	.product-media
+		width: 50px
+		margin-right: 10px
+		float: left
+		position: relative
+		&:before
+			content: ""
+			+s(book)
+			position: absolute
+			bottom: -2px
+			left: -2px
+			border: 2px solid #fff
+			border-radius: 3px
+			width: 23px
+			height: 20px
+	.product-descr
+		margin-bottom: 5px
+		overflow: hidden
+	.product-title
+		font-size: 0
+		a
+			margin-right: 5px
+			display: inline-block
+			vertical-align: middle
+			text-decoration: none
+			color: $dark_blue
+			font-size: 14px
+			&:hover
+				text-decoration: underline
+		span
+			display: inline-block
+			vertical-align: middle
+			font-size: 14px
+
+
+
+
+.price
+	color: $orange
+	font-weight: 700
+	&.m-big
+		font-size: 18px
+
+.old-price
+	color: $dark_gray
+	text-decoration: line-through 
+	&.m-big
+		font-size: 18px
+
+
+.price-field
+	font-size: 0
+	.price-field-meta
+		margin-right: 5px
+		display: inline-block
+		vertical-align: middle
+		font-size: 14px
+		color: $black 
+	.price-field-summ
+		display: inline-block
+		vertical-align: middle
+		color: $orange
+		font-size: 14px
+		font-weight: 700
+		&.m-big
+			font-size: 18px
+
+
+
+
+
+
+
+		
+
